@@ -4,11 +4,12 @@ This visualization illustrates the evolution of life expectancy over time, explo
 
 ## Project Description
 
-This data visualization project focus on the evolution of life expectancy worldwide and utilizes the Vega-Lite library for creating maps and diagrams. The objective was to demonstrate advanced data visualization techniques acquired during the semester, showcasing their versatility in a novel context. Leveraging Vega-Lite and, when necessary, approved alternate libraries, we meticulously crafted a publicly accessible web page hosted on GitHub. 
+This data visualization project focus on the evolution of life expectancy worldwide and utilizes the Vega-Lite library for creating maps and diagrams. The objective was to demonstrate advanced data visualization techniques acquired during the semester, showcasing their versatility in a novel context. With Vega-Lite library, HTML, CSS, and JavaScript, we meticulously crafted a publicly accessible web page hosted on GitHub. 
 
 ## Visualization Overview
 
 **Work in Progress**
+
 The visualization portrays the changes in life expectancy, highlighting historical data and projecting future expectations. Through this visual representation, viewers can gain a deeper understanding of the trends and potential future trajectories of life expectancy. It also explores the inequity of life expectancy to gain a more comprehensive understanding of the trends.
 
 ## Technologies Used
