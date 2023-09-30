@@ -8,7 +8,7 @@ This data visualization project focus on the evolution of life expectancy worldw
 
 ## Visualization Overview
 
-**Work in Progress**
+**[Work in Progress]**
 
 The visualization portrays the changes in life expectancy, highlighting historical data and projecting future expectations. Through this visual representation, viewers can gain a deeper understanding of the trends and potential future trajectories of life expectancy. It also explores the inequity of life expectancy to gain a more comprehensive understanding of the trends.
 
@@ -22,6 +22,22 @@ The visualization portrays the changes in life expectancy, highlighting historic
 ## How to View
 
 To access the visualization, kindly follow this [link](Working_in_progress).
+
+## References
+
+Below are all the resources referenced in this project
+
+### Data Sources
+
+**[Work in Progress]**
+
+### Graphics & Icons
+
+**[Work in Progress]**
+
+### Matherials
+
+**[Work in Progress]**
 
 
 
