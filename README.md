@@ -1,1 +1,1 @@
-# FIT3179: Data Visualisation 02
+# FIT3179: Data Visualisation 2
