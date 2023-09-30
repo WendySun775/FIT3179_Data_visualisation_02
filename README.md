@@ -27,15 +27,15 @@ To access the visualization, kindly follow this [link](Working_in_progress).
 
 Below are all the resources referenced in this project
 
-### Data Sources
+### - Data sources
 
 **[Work in Progress]**
 
-### Graphics & Icons
+### - Graphics & Icons
 
 **[Work in Progress]**
 
-### Matherials
+### - Materials
 
 **[Work in Progress]**
 
