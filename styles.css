@@ -1,1 +1,100 @@
+/* Set some default styles in browsers */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the whole page */
+body {
+    background-color: #eef9ee; /* Light Green */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6em;
+}
+
+/* Style for navigation bar */
+.w3-bar {
+    background: #b8db68; /* Yellow-Green */
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transition: all 0.3s ease-in-out; /* Animation effect */
+}
+
+/* Style for navigation links */
+.w3-bar-item {
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    float: left;
+    transition: background 0.3s ease; /* Animation effect */
+}
+
+/* Change color on hover */
+.w3-bar-item:hover {
+    background: #a4c639; /* Dark Yellow-Green */
+    color: #333;
+}
+
+/* Container */
+.w3-container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Header/Main Title */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #4c7031; /* Dark Green */
+    text-align: center;
+}
+
+/* Subtitles */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4c7031; /* Dark Green */
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Links */
+a {
+    color: #b8db68; /* Yellow-Green */
+    text-decoration: none;
+}
+
+/* Links on hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #b8db68; /* Yellow-Green */
+    color: white;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .w3-bar-item {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .w3-container {
+        width: 95%;
+    }
+}
 
