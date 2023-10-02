@@ -4,45 +4,34 @@ body, h1, h2, h3, p {
     padding: 0;
 }
 
-/* Set a background color and text color for the whole page */
 body {
-    background-color: #eef9ee; /* Light Green */
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6em;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f4e1;
+    margin: 0;
+    padding: 0;
 }
 
-/* Style for navigation bar */
-.w3-bar {
-    background: #b8db68; /* Yellow-Green */
-    color: #ffffff;
-    overflow: hidden;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    transition: all 0.3s ease-in-out; /* Animation effect */
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(174, 215, 144, 1) 0%, rgba(119, 190, 119, 1) 100%);
+    padding: 10px 0;
 }
 
-/* Style for navigation links */
-.w3-bar-item {
-    padding: 14px 20px;
+.nav-item {
+    color: #fff;
     text-decoration: none;
-    display: block;
-    float: left;
-    transition: background 0.3s ease; /* Animation effect */
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Change color on hover */
-.w3-bar-item:hover {
-    background: #a4c639; /* Dark Yellow-Green */
-    color: #333;
+.nav-item:hover {
+    color: #e8f4e1;
+    transform: scale(1.1);
 }
 
-/* Container */
-.w3-container {
-    width: 70%;
-    margin: auto;
-    overflow: hidden;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
 
 /* Header/Main Title */
 h1 {
