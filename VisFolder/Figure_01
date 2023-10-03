@@ -1,0 +1,202 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Life Expectancy of the World Population in 1820, 1920 and 2020", 
+              "color": "#03034B", 
+              "fontSize": 25
+            },
+    "background": "#E0DDD6",
+    "data": {
+      "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_With_Cumulative_Share_Data.csv"
+    },
+    "width": 800,
+    "height": 500,
+    "layer": [
+      {
+        "mark": {
+          "type": "area",
+          "opacity": 0.6,
+          "line": {"color": "#334172", "size": 2}
+        },
+        "encoding": {
+          "x": {
+            "field": "Cumulative_share_2020",
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 1]
+            }
+          },
+          "y": {
+            "field": "Life_exptecancy_2020",
+            "type": "quantitative"
+          },
+          "color": {
+            "value": "#334172"
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Life_exptecancy_2020", "type": "quantitative", "title": "Life Expectancy in 2020"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "area",
+          "opacity": 0.6,
+          "line": {"color": "#97AD3D", "size": 2}
+        },
+        "encoding": {
+          "x": {
+            "field": "Cumulative_share_1920",
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 1]
+            }
+          },
+          "y": {
+            "field": "Life_exptecancy_1920",
+            "type": "quantitative"
+          },
+          "color": {
+            "value": "#97AD3D"
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Life_exptecancy_1920", "type": "quantitative", "title": "Life Expectancy in 1920"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "area",
+          "opacity": 0.6,
+          "line": {"color": "#E0DDD6", "size": 2}
+        },
+        "encoding": {
+          "x": {
+            "field": "Cumulative_share_1820",
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 1]
+            },
+            "axis": {
+              "title": "Cumulative Share of World Population",
+              "labelColor": "#03034B", 
+              "titleColor": "#03034B", 
+              "labelFontSize": 12,
+              "titleFontSize": 14
+            }
+          },
+          "y": {
+            "field": "Life_exptecancy_1820",
+            "type": "quantitative",
+            "axis": {
+              "title": "Life Expectancy at Birth",
+              "labelColor": "#03034B", 
+              "titleColor": "#03034B", 
+              "labelFontSize": 12,
+              "titleFontSize": 14
+            }
+          },
+          "color": {
+            "value": "#E7E1C7"
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Life_exptecancy_1820", "type": "quantitative", "title": "Life Expectancy in 1820"}
+          ]
+        }
+      },
+      {
+        "mark": {"type": "text", "color": "#072B6F", "dy": -15, "fontWeight": "bold"},
+        "transform": [{
+          "filter": "datum.Country == 'China' || datum.Country == 'United States' || datum.Country == 'India'|| datum.Country == 'Russia' || datum.Country == 'Brazil'|| datum.Country == 'South Africa' || datum.Country == 'Japan'|| datum.Country == 'Germany'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'|| datum.Country == 'Somalia'|| datum.Country == 'Pakistan'"
+        }],
+        "encoding": {
+          "x": {"field": "Cumulative_share_2020", "type": "quantitative"},
+          "y": {"field": "Life_exptecancy_2020", "type": "quantitative"},
+          "text": {"field": "Country", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {"type": "text", "color": "#324B05", "dy": -20, "fontWeight": "bold"},
+        "transform": [{
+          "filter": "datum.Country == 'Bhutan' || datum.Country == 'Somalia' || datum.Country == 'China'|| datum.Country == 'South Korea' || datum.Country == 'Azerbaijan'|| datum.Country == 'Moldova' || datum.Country == 'Cuba'|| datum.Country == 'Germany'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'|| datum.Country == 'Somalia'|| datum.Country == 'Fiji'"
+        }],
+        "encoding": {
+          "x": {"field": "Cumulative_share_1920", "type": "quantitative"},
+          "y": {"field": "Life_exptecancy_1920", "type": "quantitative"},
+          "text": {"field": "Country", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {"type": "text", "color": "#F4FAE3","dy": 25, "fontWeight": "bold"},
+        "transform": [{
+          "filter": "datum.Country == 'China' || datum.Country == 'United States' || datum.Country == 'India'|| datum.Country == 'Russia' || datum.Country == 'Samoa' || datum.Country == 'Japan'|| datum.Country == 'United Kingdom'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'"
+        }],
+        "encoding": {
+          "x": {"field": "Cumulative_share_1820", "type": "quantitative"},
+          "y": {"field": "Life_exptecancy_1820", "type": "quantitative"},
+          "text": {"field": "Country", "type": "nominal"}
+        }
+      },
+    {
+      "data": {
+        "values": [
+          {"year": "1820", "color": "#E7E1C7"},
+          {"year": "1920", "color": "#97AD3D"},
+          {"year": "2020", "color": "#334172"}
+        ]
+      },
+      "mark": "circle",
+      "encoding": {
+        "color": {
+          "field": "Year",
+          "type": "nominal",
+          "legend": {"labelExpr": "datum.value === '#E7E1C7' ? '1820' : datum.value === '#97AD3D' ? '1920' : '2020'",
+          "labelColor": "#03034B",  
+          "labelFontSize": 12,
+          "titleColor": "#03034B",  
+          "titleFontSize": 16
+          },
+          "scale": {
+            "domain": ["#E7E1C7", "#97AD3D", "#334172"],
+            "range": ["#E7E1C7", "#97AD3D", "#334172"]
+          }
+        },
+        "size": {"value": 2}
+      }
+     },
+        {
+      "data": {"values": [{"text": "Countries are ordered along the x-axis ascending by the life expectancy of the population."}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": -300,  
+        "dy": -270,
+        "color": "#777777",
+        "fontSize": 13
+      },
+      "encoding": {
+        "text": {"field": "text", 
+        "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {"values": [{"text": "Data for almost all countries is shown in this chart, but not all data points are labelled with the country name."}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": -360,  
+        "dy": -250,
+        "color": "#777777",
+        "fontSize": 13
+      },
+      "encoding": {
+        "text": {"field": "text", "type": "nominal"}
+      }
+    }
+  ]
+ }
