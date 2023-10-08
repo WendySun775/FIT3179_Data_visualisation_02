@@ -3,8 +3,8 @@
   "title": "Global Life Expectancy (1800-2021)",
   "width": 800,
   "height": 400,
+  "background": "#E0DDD6",
   "projection": {"type": "equalEarth"},
-  
   "layer": [
     {
       "data": {
@@ -18,7 +18,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Cleaned_Life_Expectancy_1800_2021.csv"
+        "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Cleaned_Life_Expectancy_at_15.csv"
       },
       "mark": "geoshape",
       "transform": [
@@ -47,22 +47,31 @@
           "type": "geojson"
         },
         "color": {
-          "field": "Life expectancy",
+          "field": "Life expectancy at 15",
           "type": "quantitative",
-          "legend": {"title": "Life Expectancy"},
-          "scale": {"scheme": "viridis"}
-        }
+          "legend": {
+            "title": "Life Expectancy (Years)",
+            "orient": "bottom",
+            "gradientLength": 800
+          },
+          "scale": {"domain": [40, 90],
+                    "range": ["#E7E1C7", "#97AD3D", "#334172"]
+          }
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Life expectancy at 15", "type": "quantitative", "title": "Life Expectancy at 15"}
+        ]
       }
     }
   ],
-  
   "params": [{
     "name": "selectedYear",
-    "value": "2021",
+    "value": 2100,
     "bind": {
       "input": "range",
-      "min": 1800,
-      "max": 2021,
+      "min": 1751,
+      "max": 2100,
       "step": 1,
       "name": "Year"
     }
