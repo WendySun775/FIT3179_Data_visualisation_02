@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global Life Expectancy (1800-2021)",
+  "title": {"text": "Life Expectancy at Age 15, 1751 - 2100",
+            "color": "#03034B", 
+              "fontSize": 25},
   "width": 800,
   "height": 400,
   "background": "#E0DDD6",
@@ -52,7 +54,11 @@
           "legend": {
             "title": "Life Expectancy (Years)",
             "orient": "bottom",
-            "gradientLength": 800
+            "gradientLength": 800,
+            "labelColor": "#03034B",  
+          "labelFontSize": 12,
+          "titleColor": "#03034B",  
+          "titleFontSize": 15
           },
           "scale": {"domain": [40, 90],
                     "range": ["#E7E1C7", "#97AD3D", "#334172"]
@@ -62,6 +68,38 @@
           {"field": "Country", "type": "nominal", "title": "Country"},
           {"field": "Life expectancy at 15", "type": "quantitative", "title": "Life Expectancy at 15"}
         ]
+      }
+    },
+    {
+      "data": {"values": [{"text": "Life expectancy at age 15 refers to the average number of years a fifteen-year-old would live if age-specific mortality rates in"}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": -390,  
+        "dy": -260,
+        "color": "#777777",
+        "fontSize": 13
+      },
+      "encoding": {
+        "text": {"field": "text", 
+        "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {"values": [{"text": "the current year were to stay the same throughout their life. From 2022 onwards, the UN mid-variant projections are shown."}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": -390,  
+        "dy": -240,
+        "color": "#777777",
+        "fontSize": 13
+      },
+      "encoding": {
+        "text": {"field": "text", "type": "nominal"}
       }
     }
   ],
@@ -75,5 +113,6 @@
       "step": 1,
       "name": "Year"
     }
-  }]
+  }
+ ]
 }
