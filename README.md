@@ -30,21 +30,21 @@ Below are all the resources referenced in this project
 
 **- Data sources**
 
-1.	[Gapminder - Life Expectancy at Birth] (Life Expectancy at Birth | Gapminder)
-2.	[Gapminder - Population] (Population | Gapminder)
-3.	[United Nations - World Population Prospects 2022] (World Population Prospects - Population Division - United Nations)
-4.	[The World Bank Group - World Development Indicators] (World Development Indicators | Data Catalog (worldbank.org))
-5.	[World Health Organisation - Global Health Expenditure Database] (Global Health Expenditure Database (who.int))
+1.	[Gapminder - Life Expectancy at Birth]([Life Expectancy at Birth | Gapminde](https://www.gapminder.org/data/documentation/gd004/))
+2.	[Gapminder - Population](https://www.gapminder.org/data/documentation/gd003/)
+3.	[United Nations - World Population Prospects 2022](https://population.un.org/wpp/Download/Standard/MostUsed/)
+4.	[The World Bank Group - World Development Indicators](https://datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators)
+5.	[World Health Organisation - Global Health Expenditure Database](https://apps.who.int/nha/database/Select/Indicators/en)
 
 **- Graphics & Icons**
 
-1.	[99designs - Design for Hemp Hop, spring water / beverage company.] (https://99designs.com.au/profiles/tonitrix/designs/1766509)
+1.	[99designs - Design for Hemp Hop, spring water / beverage company.](https://99designs.com.au/profiles/tonitrix/designs/1766509)
  
  **- Materials**
  
-1.	[Imagecolorpicker.com]（https://imagecolorpicker.com/）
-2.	[TinEye Labs Multicolr Search] (https://labs.tineye.com/color/) 
-3.	[HTML Color Codes] (https://htmlcolorcodes.com/)
+1.	[Imagecolorpicker.com](https://imagecolorpicker.com/）
+2.	[TinEye Labs Multicolr Search](https://labs.tineye.com/color/) 
+3.	[HTML Color Codes](https://htmlcolorcodes.com/)
 
 
 
