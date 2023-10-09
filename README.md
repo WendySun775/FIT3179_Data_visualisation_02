@@ -42,7 +42,7 @@ Below are all the resources referenced in this project
  
  **- Materials**
  
-1.	[Imagecolorpicker.com](https://imagecolorpicker.com/)
+1.	[Imagecolorpicker](https://imagecolorpicker.com/)
 2.	[TinEye Labs Multicolr Search](https://labs.tineye.com/color/) 
 3.	[HTML Color Codes](https://htmlcolorcodes.com/)
 
