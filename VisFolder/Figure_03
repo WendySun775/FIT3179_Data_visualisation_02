@@ -1,100 +1,83 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Inequality in life expectancy vs. health expenditure per capita, 2020",
-        "color": "#03034B",
-        "fontSize": 25
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Inequality in life expectancy vs. health expenditure per capita, 2020",
+    "color": "#03034B",
+    "fontSize": 25
+  },
+  "background": "#E0DDD6",
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020.csv"
+  },
+  "mark": {
+    "type": "point",
+    "color": "#334172"
+  },
+  "selection": {
+    "regionFilter": {
+      "type": "single",
+      "fields": ["Region"],
+      "bind": {
+        "input": "select",
+        "options": [null, "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+        "name": "Select Region",
+        "labelColor": "#334172",
+        "labelFontSize": 20,
+        "titleColor": "#334172",
+        "titleFontSize": 20
+      }
+    }
+  },
+  "transform": [{
+    "filter": {
+      "selection": "regionFilter"
+    }
+  }],
+  "encoding": {
+    "x": {
+      "field": "Current health expenditure per capita, PPP",
+      "type": "quantitative",
+      "title": "Health Expenditure per Capita (PPP)",
+      "axis": {
+        "labelColor": "#03034B",
+        "titleColor": "#03034B",
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
     },
-    "background": "#E0DDD6",
-    "data": {
-        "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020.csv"
+    "y": {
+      "field": "Inequality in life expectancy (Atkinson index)",
+      "type": "quantitative",
+      "title": "Inequality in Life Expectancy (Atkinson Index)",
+      "axis": {
+        "labelColor": "#03034B",
+        "titleColor": "#03034B",
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
     },
-    "transform": [{
-        "filter": {
-            "field": "Region",
-            "oneOf": ["AFR", "AMR", "EMR", "EUR", "SEAR", "WPR"]
-        }
-    }],
-    "width": 800,
-    "height": 500,
-    "layer": [
-        {
-            "mark": {
-                "type": "circle",
-                "opacity": 0.6
-            },
-            "encoding": {
-                "x": {
-                    "field": "Current health expenditure per capita, PPP",
-                    "type": "quantitative",
-                    "axis": {
-                        "title": "Current health expenditure per capita, PPP",
-                        "labelColor": "#03034B",
-                        "titleColor": "#03034B",
-                        "labelFontSize": 12,
-                        "titleFontSize": 14
-                    }
-                },
-                "y": {
-                    "field": "Inequality in life expectancy (Atkinson index)",
-                    "type": "quantitative",
-                    "axis": {
-                        "title": "Inequality in life expectancy (Atkinson index)",
-                        "labelColor": "#03034B",
-                        "titleColor": "#03034B",
-                        "labelFontSize": 12,
-                        "titleFontSize": 14
-                    }
-                },
-                "size": {
-                    "field": "Population (in thousands)",
-                    "type": "quantitative"
-                },
-                "color": {
-                    "field": "Region",
-                    "type": "nominal",
-                    "legend": {
-                        "title": "Region",
-                        "labelColor": "#03034B",
-                        "titleColor": "#03034B",
-                        "labelFontSize": 12,
-                        "titleFontSize": 14
-                    }
-                },
-                "tooltip": [
-                    {"field": "Country", "type": "nominal"},
-                    {"field": "Current health expenditure per capita, PPP", "type": "quantitative"},
-                    {"field": "Inequality in life expectancy (Atkinson index)", "type": "quantitative"},
-                    {"field": "Population (in thousands)", "type": "quantitative"},
-                    {"field": "Region", "type": "nominal"}
-                ]
-            }
-        },
-        {
-            "mark": {
-                "type": "text",
-                "dy": -15,
-                "color": "#03034B"
-            },
-            "transform": [
-                {
-                    "filter": "datum.Region == 'EMR' || datum.Region == 'AFR'"
-                }
-            ],
-            "encoding": {
-                "x": {
-                    "field": "Current health expenditure per capita, PPP",
-                    "type": "quantitative"
-                },
-                "y": {
-                    "field": "Inequality in life expectancy (Atkinson index)",
-                    "type": "quantitative"
-                },
-                "text": {
-                    "field": "Country",
-                    "type": "nominal"
-                }
-            }
-        }
+    "color": {
+      "field": "Region",
+      "type": "nominal"
+    },
+    "tooltip": [{
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "Current health expenditure per capita, PPP",
+        "type": "quantitative"
+      },
+      {
+        "field": "Inequality in life expectancy (Atkinson index)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Region",
+        "type": "nominal"
+      }
     ]
+  }
 }
