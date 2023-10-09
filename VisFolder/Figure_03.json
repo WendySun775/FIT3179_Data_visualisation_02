@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Inequality in life expectancy vs. health expenditure per capita, 2020",
+    "text": "Inequality in Life Expectancy vs. Health Expenditure Per Capita, 2020",
     "color": "#03034B",
     "fontSize": 20
   },
