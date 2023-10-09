@@ -30,7 +30,7 @@ Below are all the resources referenced in this project
 
 **- Data sources**
 
-1.	[Gapminder - Life Expectancy at Birth]([Life Expectancy at Birth | Gapminde](https://www.gapminder.org/data/documentation/gd004/))
+1.	[Gapminder - Life Expectancy at Birth](https://www.gapminder.org/data/documentation/gd004/)
 2.	[Gapminder - Population](https://www.gapminder.org/data/documentation/gd003/)
 3.	[United Nations - World Population Prospects 2022](https://population.un.org/wpp/Download/Standard/MostUsed/)
 4.	[The World Bank Group - World Development Indicators](https://datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators)
@@ -42,7 +42,7 @@ Below are all the resources referenced in this project
  
  **- Materials**
  
-1.	[Imagecolorpicker.com](https://imagecolorpicker.com/）
+1.	[Imagecolorpicker.com](https://imagecolorpicker.com/)
 2.	[TinEye Labs Multicolr Search](https://labs.tineye.com/color/) 
 3.	[HTML Color Codes](https://htmlcolorcodes.com/)
 
