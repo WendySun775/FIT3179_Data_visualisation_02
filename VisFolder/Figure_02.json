@@ -4,7 +4,7 @@
             "color": "#03034B", 
               "fontSize": 25},
   "width": 800,
-  "height": 400,
+  "height": 500,
   "background": "#E0DDD6",
   "projection": {"type": "equalEarth"},
   "layer": [
