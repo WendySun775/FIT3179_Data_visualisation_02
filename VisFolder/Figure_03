@@ -11,10 +11,6 @@
   "data": {
     "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020.csv"
   },
-  "mark": {
-    "type": "point",
-    "color": "#334172"
-  },
   "selection": {
     "regionFilter": {
       "type": "single",
@@ -22,11 +18,7 @@
       "bind": {
         "input": "select",
         "options": [null, "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
-        "name": "Select Region",
-        "labelColor": "#334172",
-        "labelFontSize": 20,
-        "titleColor": "#334172",
-        "titleFontSize": 20
+        "name": "Select Region"
       }
     }
   },
@@ -35,6 +27,11 @@
       "selection": "regionFilter"
     }
   }],
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 80
+  },
   "encoding": {
     "x": {
       "field": "Current health expenditure per capita, PPP",
@@ -60,7 +57,11 @@
     },
     "color": {
       "field": "Region",
-      "type": "nominal"
+      "type": "nominal",
+      "scale": {
+        "domain": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+        "range": ["#106FAD", "#EEAE0F", "#fdfeea", "#984ea3", "#065735", "#ffff33"]
+        }
     },
     "tooltip": [{
         "field": "Country",
@@ -73,10 +74,6 @@
       {
         "field": "Inequality in life expectancy (Atkinson index)",
         "type": "quantitative"
-      },
-      {
-        "field": "Region",
-        "type": "nominal"
       }
     ]
   }
