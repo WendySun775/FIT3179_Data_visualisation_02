@@ -26,6 +26,8 @@
         h2, h3, h4, h5, h6 {text-align: center; font-weight: bold; margin-bottom: 20px; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);}
         .w3-container {text-align: center;}
         .w3-container > * {margin: 0 auto;}
+        .flex-container {display: flex; justify-content: space-between;}
+        .flex-item {width: 48%; /* Subtract a bit to account for potential padding/margins */box-sizing: border-box;}
         
         /*Navigation Bar*/
         .w3-bar {position: fixed; top: 0; left: 0; width: 100%; background-color: #03034B; z-index: 1000;  
@@ -36,8 +38,8 @@
         .w3-container > * {margin: 0 auto;}
 
         /*footer*/
-        .footer-nav {position: fixed; bottom: 0; left: 0; width: 100%; background-color: #03034B; z-index: 1000;
-                     display: flex; justify-content: center; align-items: center; padding: 10px; color: white; font-weight: bold;}
+        .footer-nav {width: 100%; background-color: #03034B; display: flex; justify-content: center; 
+                     align-items: center; padding: 40px; color: white; font-weight: bold;}
     </style>
 </head>
 
@@ -56,6 +58,7 @@
     
     <!-- Overview & Definition -->
     <div id="overview" class="w3-container">
+    <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Overview & Definition</h2>
     <h2>Overview & Definition</h2>
     <div class="flex-container">
         <div class="flex-item">
@@ -73,6 +76,7 @@
 
     <!-- Historical Review -->
     <div id="historical-review" class="w3-container">
+    <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Historical Review: Life Expectancy Increased in All Countries of the World</h2>
         <h2>Historical Review: Life Expectancy Increased in All Countries of the World</h2>
         <!-- Vega visualization for Figure_01.json -->
         <div id="vis1"></div>
@@ -80,6 +84,7 @@
 
     <!-- Looking Forward -->
     <div id="looking-forward" class="w3-container">
+    <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Looking Forward: Projections Indicate a Continual Rise in Life Expectancy Across the World</h2>
         <h2>Looking Forward: Projections Indicate a Continual Rise in Life Expectancy Across the World</h2>
         <!-- Vega visualization for Figure_02.json -->
         <div id="vis2"></div>
@@ -87,6 +92,7 @@
 
     <!-- Disparity & Inequality -->
     <div id="disparity-inequality" class="w3-container">
+    <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Disparity & Inequality: The Existence of Unequal Life Expectancy Within the Same Country</h2>
         <h2>Disparity & Inequality: The Existence of Unequal Life Expectancy Within the Same Country</h2>
         <!-- Vega visualization for Figure_03.json -->
         <div id="vis3"></div>
@@ -94,15 +100,12 @@
 
     <!-- Conclusion & Exploration -->
     <div id="conclusion-exploration" class="w3-container">
+    <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Conclusion & Exploration: Analyzing Global Trends and Determinants of Life Expectancy</h2>
         <h2>Conclusion & Exploration: Analyzing Global Trends and Determinants of Life Expectancy</h2>
         <!-- The rest of the section content goes here -->
     </div>
 
-    <!-- Footer -->
-    <div id="footer">
-        &copy; 2023 Wendy Sun. All rights reserved.
-    </div>
-    
+    <!-- Footer -->    
     <div class="footer-nav">
         © 2023 Wendy Sun. All rights reserved.
     </div>
