@@ -6,47 +6,46 @@ body, h1, h2, h3, p {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #E0DDD6;
-    opacity: 1;
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #E0DDD6 11px), repeating-linear-gradient(#beb7a955, #beb7a9);
-    margin: 0;
-    padding: 0;
+    background-color: #ECE9E6;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ECE9E6 11px), repeating-linear-gradient(#beb7a9, #beb7a9);
 }
 
-.nav-bar {
+.w3-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(90deg, rgba(174, 215, 144, 1) 0%, rgba(119, 190, 119, 1) 100%);
+    background: linear-gradient(90deg, rgba(52, 58, 64, 1) 0%, rgba(40, 48, 55, 1) 100%); /* Dark gradient */
     padding: 10px 0;
 }
 
 .nav-item {
-    color: #fff;
+    color: #E8F4E1; /* A light color for better readability */
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
+    padding: 5px 15px;
+    border-radius: 15px;
 }
 
 .nav-item:hover {
-    color: #e8f4e1;
+    background-color: #4C7031; /* Dark Green */
     transform: scale(1.1);
 }
 
 /* Header/Main Title */
-h1 {
+h1.main-title {
     font-size: 3em;
-    margin-bottom: 20px;
-    color: #4c7031; /* Dark Green */
+    margin: 20px 0;
+    color: #03034B; /* Dark Blue */
     text-align: center;
 }
 
 /* Subtitles */
 h2 {
     font-size: 2em;
-    margin-bottom: 20px;
-    color: #4c7031; /* Dark Green */
+    margin: 20px 0;
+    color: #03034B; /* Dark Blue */
 }
 
 /* Paragraphs */
@@ -64,13 +63,14 @@ a {
 /* Links on hover */
 a:hover {
     text-decoration: underline;
+    color: #4C7031; /* Dark Green */
 }
 
 /* Footer */
 #footer {
     text-align: center;
     padding: 30px 20px;
-    background: #b8db68; /* Yellow-Green */
+    background: #4C7031; /* Dark Green */
     color: white;
     box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
@@ -91,10 +91,17 @@ a:hover {
 .flex-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Wrap items if they can't fit in a single line */
 }
 
 .flex-item {
     width: 48%; /* Subtract a bit to account for potential padding/margins */
     box-sizing: border-box;
+    background: #F5F5F5; /* A light grey background */
+    border-radius: 10px; /* Rounded corners for each flex item */
+    padding: 15px;
+    margin: 10px 0; /* Some margin for spacing */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
+
 
