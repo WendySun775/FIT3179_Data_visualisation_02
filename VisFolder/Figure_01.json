@@ -8,8 +8,8 @@
     "data": {
       "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_With_Cumulative_Share_Data.csv"
     },
-    "width": 800,
-    "height": 500,
+    "width": 600,
+    "height": 400,
     "layer": [
       {
         "mark": {
