@@ -88,4 +88,13 @@ a:hover {
     }
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item {
+    width: 48%; /* Subtract a bit to account for potential padding/margins */
+    box-sizing: border-box;
+}
 
