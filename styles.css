@@ -6,7 +6,9 @@ body, h1, h2, h3, p {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e8f4e1;
+    background-color: #E0DDD6;
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #E0DDD6 11px), repeating-linear-gradient(#beb7a955, #beb7a9);
     margin: 0;
     padding: 0;
 }
@@ -31,7 +33,6 @@ body {
     color: #e8f4e1;
     transform: scale(1.1);
 }
-
 
 /* Header/Main Title */
 h1 {
@@ -86,4 +87,5 @@ a:hover {
         width: 95%;
     }
 }
+
 
