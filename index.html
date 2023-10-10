@@ -5,9 +5,9 @@
     <title>Life Expectancy Evolution: Between Past and Future</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+
     <!-- VegaLite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -19,13 +19,17 @@
     <!-- Custom Styles -->
     <style>
         /* Basic resets */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         /*Background*/
         body {
             padding-top: 50px;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(315deg, #ece9e6 0%, #ffffff 74%);
+            background-color: #E0DDD6;
             color: #333;
         }
 
@@ -34,8 +38,8 @@
             text-align: center;
             font-weight: 700;
             margin-bottom: 50px;
-            color: #03034B;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            color: #2E2E2E;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
             border-radius: 8px;
             background: rgba(0,0,0,0.05);
@@ -47,7 +51,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #03034B;
+            background-color: #2E2E2E;
             z-index: 1000;
             display: flex;
             justify-content: space-around;
@@ -57,14 +61,14 @@
         .nav-item {
             margin: 0 15px;
             padding: 10px 20px;
-            color: white;
+            color: #E0DDD6;
             text-decoration: none;
             border-radius: 20px;
             background: rgba(0,0,0,0.1);
             transition: all 0.3s;
         }
         .nav-item:hover {
-            background-color: #25233D;
+            background-color: #5D5D5D;
             transform: scale(1.05);
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         }
@@ -75,10 +79,10 @@
             font-weight: 700;
             margin: 20px 0;
             padding: 10px 20px;
-            background-color: #03034B;
-            color: white;
+            background-color: #B3B1AC;
+            color: #2E2E2E;
             border-radius: 8px;
-            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .flex-container {
@@ -101,19 +105,19 @@
         /* Footer */
         .footer-nav {
             width: 100%;
-            background-color: #03034B;
+            background-color: #2E2E2E;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px 0;
-            color: white;
+            color: #E0DDD6;
             font-weight: bold;
-            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
         }
 
     </style>
 </head>
-
+    
 <body>
     <!-- TOP BANNER -->
     <div class="w3-bar">
