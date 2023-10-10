@@ -17,7 +17,7 @@
       "fields": ["Region"],
       "bind": {
         "input": "select",
-        "options": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+        "options": [null, "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
         "name": "Select Region"
       }
     }
