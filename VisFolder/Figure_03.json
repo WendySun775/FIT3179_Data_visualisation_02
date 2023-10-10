@@ -60,7 +60,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
-        "range": ["#702006", "#c29f06", "#97AD3D", "#066b32", "#065735", "#825707"]
+        "range": ["#702006", "#c29f06", "#97AD3D", "#764599", "#065735", "#825707"]
         }
     },
     "tooltip": [{
