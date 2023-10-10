@@ -6,8 +6,8 @@
     "fontSize": 20
   },
   "background": "#E0DDD6",
-  "width": 600,
-  "height": 400,
+  "width": 800,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020.csv"
   },
