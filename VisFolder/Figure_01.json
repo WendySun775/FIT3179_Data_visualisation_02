@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text": "Life Expectancy of the World Population in 1820, 1920 and 2020", 
-              "color": "#03034B", 
-              "fontSize": 20
+              "color": "#2e263d", 
+              "fontSize": 24
             },
     "background": "#E0DDD6",
     "data": {
@@ -15,7 +15,7 @@
         "mark": {
           "type": "area",
           "opacity": 0.6,
-          "line": {"color": "#334172", "size": 2}
+          "line": {"color": "#2e263d", "size": 2}
         },
         "encoding": {
           "x": {
@@ -30,7 +30,7 @@
             "type": "quantitative"
           },
           "color": {
-            "value": "#334172"
+            "value": "#2b3347"
           },
           "tooltip": [
             {"field": "Country", "type": "nominal"},
@@ -42,7 +42,7 @@
         "mark": {
           "type": "area",
           "opacity": 0.6,
-          "line": {"color": "#97AD3D", "size": 2}
+          "line": {"color": "#6b350f", "size": 2}
         },
         "encoding": {
           "x": {
@@ -57,7 +57,7 @@
             "type": "quantitative"
           },
           "color": {
-            "value": "#97AD3D"
+            "value": "#8b4513"
           },
           "tooltip": [
             {"field": "Country", "type": "nominal"},
@@ -69,7 +69,7 @@
         "mark": {
           "type": "area",
           "opacity": 0.6,
-          "line": {"color": "#E0DDD6", "size": 2}
+          "line": {"color": "#d5e0e8", "size": 2}
         },
         "encoding": {
           "x": {
@@ -80,8 +80,8 @@
             },
             "axis": {
               "title": "Cumulative Share of World Population",
-              "labelColor": "#03034B", 
-              "titleColor": "#03034B", 
+              "labelColor": "#2e263d", 
+              "titleColor": "#2e263d", 
               "labelFontSize": 12,
               "titleFontSize": 14
             }
@@ -91,14 +91,14 @@
             "type": "quantitative",
             "axis": {
               "title": "Life Expectancy at Birth",
-              "labelColor": "#03034B", 
-              "titleColor": "#03034B", 
+              "labelColor": "#2e263d", 
+              "titleColor": "#2e263d", 
               "labelFontSize": 12,
               "titleFontSize": 14
             }
           },
           "color": {
-            "value": "#E7E1C7"
+            "value": "#cad4dc"
           },
           "tooltip": [
             {"field": "Country", "type": "nominal"},
@@ -107,7 +107,7 @@
         }
       },
       {
-        "mark": {"type": "text", "color": "#072B6F", "dy": -15, "fontWeight": "bold"},
+        "mark": {"type": "text", "color": "#2e263d", "dy": -15, "fontWeight": "bold"},
         "transform": [{
           "filter": "datum.Country == 'China' || datum.Country == 'United States' || datum.Country == 'India'|| datum.Country == 'Russia' || datum.Country == 'Brazil'|| datum.Country == 'South Africa' || datum.Country == 'Japan'|| datum.Country == 'Germany'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'|| datum.Country == 'Somalia'|| datum.Country == 'Pakistan'"
         }],
@@ -118,9 +118,9 @@
         }
       },
       {
-        "mark": {"type": "text", "color": "#324B05", "dy": -20, "fontWeight": "bold"},
+        "mark": {"type": "text", "color": "#6b350f", "dy": -20, "fontWeight": "bold"},
         "transform": [{
-          "filter": "datum.Country == 'Bhutan' || datum.Country == 'Somalia' || datum.Country == 'China'|| datum.Country == 'South Korea' || datum.Country == 'Azerbaijan'|| datum.Country == 'Moldova' || datum.Country == 'Cuba'|| datum.Country == 'Germany'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'|| datum.Country == 'Somalia'|| datum.Country == 'Fiji'"
+          "filter": "datum.Country == 'Bhutan' || datum.Country == 'Somalia' || datum.Country == 'China'|| datum.Country == 'South Korea' || datum.Country == 'Azerbaijan'|| datum.Country == 'Moldova' || datum.Country == 'Cuba'|| datum.Country == 'Germany'|| datum.Country == 'Australia'|| datum.Country == 'Somalia'|| datum.Country == 'Fiji'"
         }],
         "encoding": {
           "x": {"field": "Cumulative_share_1920", "type": "quantitative"},
@@ -129,9 +129,9 @@
         }
       },
       {
-        "mark": {"type": "text", "color": "#F4FAE3","dy": 25, "fontWeight": "bold"},
+        "mark": {"type": "text", "color": "#edf5fa","dy": 25, "fontWeight": "bold"},
         "transform": [{
-          "filter": "datum.Country == 'China' || datum.Country == 'United States' || datum.Country == 'India'|| datum.Country == 'Russia' || datum.Country == 'Samoa' || datum.Country == 'Japan'|| datum.Country == 'United Kingdom'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'"
+          "filter": "datum.Country == 'China' || datum.Country == 'India'|| datum.Country == 'Russia' || datum.Country == 'Samoa' || datum.Country == 'Japan'|| datum.Country == 'United Kingdom'|| datum.Country == 'Australia'|| datum.Country == 'Rwanda'"
         }],
         "encoding": {
           "x": {"field": "Cumulative_share_1820", "type": "quantitative"},
@@ -159,8 +159,8 @@
           "titleFontSize": 16
           },
           "scale": {
-            "domain": ["#E7E1C7", "#97AD3D", "#334172"],
-            "range": ["#E7E1C7", "#97AD3D", "#334172"]
+            "domain": ["#cad4dc", "#8b4513", "#2b3347"],
+            "range": ["#cad4dc", "#8b4513", "#2b3347"]
           }
         },
         "size": {"value": 2}
@@ -191,6 +191,36 @@
         "baseline": "top",
         "dx": -360,  
         "dy": -250,
+        "color": "#777777",
+        "fontSize": 13
+      },
+      "encoding": {
+        "text": {"field": "text", "type": "nominal"}
+      }
+    },
+    {
+      "data": {"values": [{"text": "The x-axis, representing Cumulative Share of World Population, shows the accumulated population percentage up to each point"}]},
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dx": 0,  
+        "dy": 300,
+        "color": "#777777",
+        "fontSize": 13
+      },
+      "encoding": {
+        "text": {"field": "text", "type": "nominal"}
+      }
+    },
+      {
+      "data": {"values": [{"text": " based on life expectancy. It provides a perspective on how much of the world's population had a life expectancy up to a certain value."}]},
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dx": 0,  
+        "dy": 320,
         "color": "#777777",
         "fontSize": 13
       },
