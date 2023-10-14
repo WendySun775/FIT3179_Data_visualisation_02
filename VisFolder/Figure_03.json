@@ -17,14 +17,17 @@
       "fields": ["Region"],
       "bind": {
         "input": "select",
-        "options": [null, "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+        "options": ["Show All", "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
         "name": "Select Region"
       }
     }
   },
   "transform": [{
     "filter": {
-      "selection": "regionFilter"
+      "or": [
+        {"field": "Region", "equal": {"selection": "regionFilter"}},
+        {"selection": "regionFilter", "oneOf": ["Show All"]}
+      ]
     }
   }],
   "mark": {
@@ -61,7 +64,7 @@
       "scale": {
         "domain": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
         "range": ["#702006", "#c29f06", "#97AD3D", "#764599", "#065735", "#0971ad"]
-        }
+      }
     },
     "tooltip": [{
         "field": "Country",
