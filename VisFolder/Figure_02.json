@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Life Expectancy at Age 15, 1951 - 2100",
+    "text": "Life Expectancy at Age 15, 1951-2100",
     "color": "#2e263d",
-    "fontSize": 22
+    "fontSize": 24
   },
-  "width": 800,
-  "height": 500,
+  "width": 900,
+  "height": 600,
   "background": "#E0DDD6",
   "layer": [
     {
@@ -42,9 +42,7 @@
       "mark": {"type": "geoshape", "fill": "#c6c9ce", "stroke": "grey"},
       "encoding": {
         "tooltip": {
-          "field": "properties.NAME",
-          "type": "nominal",
-          "title": "No Data for"
+          "value": "Data is not available"
         }
       },
       "transform": [
@@ -55,7 +53,7 @@
               "eSwatini",
               "Eq. Guinea",
               "Falkland Is.",
-              "Fr.S.Antarctic Lands",
+              "Fr. S. Antarctic Lands",
               "Antarctica"
             ]
           }
@@ -76,7 +74,7 @@
           "legend": {
             "title": "Life Expectancy (Years)",
             "orient": "bottom",
-            "gradientLength": 800,
+            "gradientLength": 900,
             "labelColor": "#2e263d",
             "labelFontSize": 12,
             "titleColor": "#2e263d",
@@ -125,10 +123,10 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "dx": -400,
+        "dx": -430,
         "dy": -290,
         "color": "#777777",
-        "fontSize": 13
+        "fontSize": 15
       },
       "encoding": {"text": {"field": "text", "type": "nominal"}},
       "projection": {"type": "equalEarth"}
@@ -145,10 +143,10 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "dx": -400,
+        "dx": -430,
         "dy": -270,
         "color": "#777777",
-        "fontSize": 13
+        "fontSize": 15
       },
       "encoding": {"text": {"field": "text", "type": "nominal"}},
       "projection": {"type": "equalEarth"}
@@ -157,13 +155,13 @@
   "params": [
     {
       "name": "selectedYear",
-      "value": 2100,
+      "value": 2020,
       "bind": {
         "input": "range",
         "min": 1951,
         "max": 2100,
         "step": 1,
-        "name": "Year"
+        "name": "Select Year: "
       }
     }
   ]
