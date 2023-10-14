@@ -20,7 +20,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Cleaned_Life_Expectancy_at_15.csv"
+        "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Filtered_Cleaned_Life_Expectancy_at_15.csv"
       },
       "mark": "geoshape",
       "transform": [
