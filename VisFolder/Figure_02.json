@@ -82,7 +82,7 @@
             "titleColor": "#2e263d",
             "titleFontSize": 15
           },
-          "scale": {"domain": [40, 90], "range": ["#E0DDD6", "#8b4513"]}
+          "scale": {"domain": [30, 90], "range": ["#E0DDD6", "#8b4513"]}
         },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
