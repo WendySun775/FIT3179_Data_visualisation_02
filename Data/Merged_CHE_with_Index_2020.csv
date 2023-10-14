@@ -1,4 +1,4 @@
-Country,"Current health expenditure per capita, PPP",Population,Year,Region,Inequality in life expectancy (Atkinson index)
+Country,"Current health expenditure per capita, PPP",Population (in thousands),Year,Region,Inequality in life expectancy (Atkinson index)
 Afghanistan,80,"38,972",2020,Eastern Mediterranean,0.26433697
 Algeria,215,"43,452",2020,Africa,0.1279661
 Andorra,"3,337",78,2020,Europe,0.054219212
