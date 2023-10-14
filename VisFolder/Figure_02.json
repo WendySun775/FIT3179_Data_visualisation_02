@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Life Expectancy at Age 15, 1751 - 2100",
+  "title": {"text": "Life Expectancy at Age 15, 1951 - 2100",
             "color": "#03034B", 
               "fontSize": 20},
   "width": 800,
@@ -108,7 +108,7 @@
     "value": 2100,
     "bind": {
       "input": "range",
-      "min": 1751,
+      "min": 1951,
       "max": 2100,
       "step": 1,
       "name": "Year"
