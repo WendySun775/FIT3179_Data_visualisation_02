@@ -1,18 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Life Expectancy at Age 15, 1751 - 2100", "color": "#03034B", "fontSize": 20},
+  "title": {
+    "text": "Life Expectancy at Age 15, 1951 - 2100",
+    "color": "#2e263d",
+    "fontSize": 22
+  },
   "width": 800,
   "height": 500,
   "background": "#E0DDD6",
-  "projection": {"type": "equalEarth"},
   "layer": [
     {
       "data": {"sphere": true},
-      "mark": {"type": "geoshape", "fill": "#A8C6DF"}
+      "mark": {"type": "geoshape", "fill": "#cad4dc"},
+      "projection": {"type": "equalEarth"}
     },
     {
       "data": {"graticule": true},
-      "mark": {"type": "geoshape", "stroke": "#B8D1E3", "strokeWidth": 0.5}
+      "mark": {"type": "geoshape", "stroke": "#b9c2c9", "strokeWidth": 0.5},
+      "projection": {"type": "equalEarth"}
     },
     {
       "data": {
@@ -21,14 +26,73 @@
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"},
       "encoding": {
-        "tooltip": {"field": "properties.NAME", "type": "nominal", "title": "Country"}
-      }
+        "tooltip": {
+          "field": "properties.NAME",
+          "type": "nominal",
+          "title": "Country"
+        }
+      },
+      "projection": {"type": "equalEarth"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/VisFolder/ne_110m_admin_0_countries.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "#c6c9ce", "stroke": "grey"},
+      "encoding": {
+        "tooltip": {
+          "field": "properties.NAME",
+          "type": "nominal",
+          "title": "No Data for"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "properties.NAME",
+            "oneOf": [
+              "eSwatini",
+              "Eq. Guinea",
+              "Falkland Is.",
+              "Fr.S.Antarctic Lands",
+              "Antarctica"
+            ]
+          }
+        }
+      ],
+      "projection": {"type": "equalEarth"}
     },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Filtered_Cleaned_Life_Expectancy_at_15.csv"
       },
       "mark": "geoshape",
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "Life expectancy at 15",
+          "type": "quantitative",
+          "legend": {
+            "title": "Life Expectancy (Years)",
+            "orient": "bottom",
+            "gradientLength": 800,
+            "labelColor": "#2e263d",
+            "labelFontSize": 12,
+            "titleColor": "#2e263d",
+            "titleFontSize": 15
+          },
+          "scale": {"domain": [40, 90], "range": ["#E0DDD6", "#8b4513"]}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {
+            "field": "Life expectancy at 15",
+            "type": "quantitative",
+            "title": "Life Expectancy at 15"
+          }
+        ]
+      },
       "transform": [
         {
           "lookup": "Country",
@@ -45,77 +109,62 @@
           },
           "as": "geo"
         },
-        {
-          "filter": "datum.Year == selectedYear"
-        }
+        {"filter": "datum.Year == selectedYear"}
       ],
-      "encoding": {
-        "shape": {
-          "field": "geo",
-          "type": "geojson"
-        },
-        "color": {
-          "field": "Life expectancy at 15",
-          "type": "quantitative",
-          "legend": {
-            "title": "Life Expectancy (Years)",
-            "orient": "bottom",
-            "gradientLength": 800,
-            "labelColor": "#03034B",
-            "labelFontSize": 12,
-            "titleColor": "#03034B",
-            "titleFontSize": 15
-          },
-          "scale": {"domain": [40, 90], "range": ["#E7E1C7", "#97AD3D", "#334172"]}
-        },
-        "tooltip": [
-          {"field": "Country", "type": "nominal", "title": "Country"},
-          {"field": "Life expectancy at 15", "type": "quantitative", "title": "Life Expectancy at 15"}
+      "projection": {"type": "equalEarth"}
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "text": "Life expectancy at age 15 refers to the average number of years a fifteen-year-old would live if age-specific mortality rates in"
+          }
         ]
-      }
-    },
-    {
-      "data": {"values": [{"text": "Life expectancy at age 15 refers to the average number of years a fifteen-year-old would live if age-specific mortality rates in"}]},
+      },
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "dx": -390,
-        "dy": -260,
+        "dx": -400,
+        "dy": -290,
         "color": "#777777",
         "fontSize": 13
       },
-      "encoding": {
-        "text": {"field": "text", "type": "nominal"}
-      }
+      "encoding": {"text": {"field": "text", "type": "nominal"}},
+      "projection": {"type": "equalEarth"}
     },
     {
-      "data": {"values": [{"text": "the current year were to stay the same throughout their life. From 2022 onwards, the UN mid-variant projections are shown."}]},
+      "data": {
+        "values": [
+          {
+            "text": "the current year were to stay the same throughout their life. From 2022 onwards, the UN mid-variant projections are shown."
+          }
+        ]
+      },
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "dx": -390,
-        "dy": -240,
+        "dx": -400,
+        "dy": -270,
         "color": "#777777",
         "fontSize": 13
       },
-      "encoding": {
-        "text": {"field": "text", "type": "nominal"}
-      }
+      "encoding": {"text": {"field": "text", "type": "nominal"}},
+      "projection": {"type": "equalEarth"}
     }
   ],
   "params": [
     {
-    "name": "selectedYear",
-    "value": 2100,
-    "bind": {
-      "input": "range",
-      "min": 1751,
-      "max": 2100,
-      "step": 1,
-      "name": "Year"
+      "name": "selectedYear",
+      "value": 2100,
+      "bind": {
+        "input": "range",
+        "min": 1951,
+        "max": 2100,
+        "step": 1,
+        "name": "Year"
+      }
     }
-  }
   ]
 }
