@@ -11,25 +11,30 @@
   "data": {
     "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020.csv"
   },
-  "selection": {
-    "regionFilter": {
-      "type": "single",
-      "fields": ["Region"],
+  "params": [
+    {
+      "name": "regionFilter",
+      "value": "Show All",
       "bind": {
         "input": "select",
-        "options": ["Show All", "Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
+        "options": [
+          "Show All",
+          "Africa",
+          "Americas",
+          "Eastern Mediterranean",
+          "Europe",
+          "South-East Asia",
+          "Western Pacific"
+        ],
         "name": "Select Region"
       }
     }
-  },
-  "transform": [{
-    "filter": {
-      "or": [
-        {"field": "Region", "equal": {"selection": "regionFilter"}},
-        {"selection": "regionFilter", "oneOf": ["Show All"]}
-      ]
+  ],
+  "transform": [
+    {
+      "filter": "regionFilter == 'Show All' || datum.Region == regionFilter"
     }
-  }],
+  ],
   "mark": {
     "type": "point",
     "filled": true,
@@ -66,7 +71,8 @@
         "range": ["#702006", "#c29f06", "#97AD3D", "#764599", "#065735", "#0971ad"]
       }
     },
-    "tooltip": [{
+    "tooltip": [
+      {
         "field": "Country",
         "type": "nominal"
       },
