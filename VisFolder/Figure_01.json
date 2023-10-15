@@ -139,31 +139,32 @@
           "text": {"field": "Country", "type": "nominal"}
         }
       },
-    {
-      "data": {
-        "values": [
-          {"year": "1820", "color": "#E7E1C7"},
-          {"year": "1920", "color": "#97AD3D"},
-          {"year": "2020", "color": "#334172"}
-        ]
+      {
+  "data": {
+    "values": [
+      {"year": "1820", "color": "#cad4dc"},
+      {"year": "1920", "color": "#8b4513"},
+      {"year": "2020", "color": "#2b3347"}
+    ]
+  },
+  "mark": "circle",
+  "encoding": {
+    "color": {
+      "field": "year",
+      "type": "nominal",
+      "legend": {
+        "title": "Year",
+        "labelColor": "#03034B",  
+        "labelFontSize": 12,
+        "titleColor": "#03034B",  
+        "titleFontSize": 16
       },
-      "mark": "circle",
-      "encoding": {
-        "color": {
-          "field": "Year",
-          "type": "nominal",
-          "legend": {"labelExpr": "datum.value === '#E7E1C7' ? '1820' : datum.value === '#97AD3D' ? '1920' : '2020'",
-          "labelColor": "#03034B",  
-          "labelFontSize": 12,
-          "titleColor": "#03034B",  
-          "titleFontSize": 16
-          },
-          "scale": {
-            "domain": ["#cad4dc", "#8b4513", "#2b3347"],
-            "range": ["#cad4dc", "#8b4513", "#2b3347"]
-          }
-        },
-        "size": {"value": 2}
+      "scale": {
+        "domain": ["1820", "1920", "2020"],
+        "range": ["#cad4dc", "#8b4513", "#2b3347"]
+      }
+    },
+    "size": {"value": 2}
       }
      },
         {
