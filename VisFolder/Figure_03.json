@@ -9,7 +9,7 @@
   "width": 800,
   "height": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/WendySun775/FIT3179-Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020.csv"
+    "url": "https://raw.githubusercontent.com/WendySun775/FIT3179_Data_visualisation_02/main/Data/Merged_CHE_with_Index_2020_cleaned.csv"
   },
   "params": [
     {
@@ -33,18 +33,23 @@
   "transform": [
     {
       "filter": "regionFilter == 'Show All' || datum.Region == regionFilter"
+    },
+    {
+      "calculate": "datum['Population (in thousands)']", 
+      "as": "Population"
     }
   ],
   "mark": {
     "type": "point",
-    "filled": true,
-    "size": 80
+    "filled": true
   },
   "encoding": {
     "x": {
       "field": "Current health expenditure per capita, PPP",
       "type": "quantitative",
       "title": "Health Expenditure per Capita (PPP)",
+        "scale": {"type": "log",
+                  "domain": [10, 15000]},
       "axis": {
         "labelColor": "#03034B",
         "titleColor": "#03034B",
@@ -63,12 +68,24 @@
         "titleFontSize": 14
       }
     },
+    "size": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [100, 1000, 10000, 100000, 500000, 1500000],
+        "range": [10, 50, 150, 300, 500, 750, 1000]
+      },
+      "legend": {
+        "format": ".1s"
+      }
+    },
     "color": {
       "field": "Region",
       "type": "nominal",
       "scale": {
         "domain": ["Africa", "Americas", "Eastern Mediterranean", "Europe", "South-East Asia", "Western Pacific"],
-        "range": ["#702006", "#c29f06", "#97AD3D", "#764599", "#065735", "#0971ad"]
+        "range": ["#413839", "#8f2d10", "#ffffff", "#1c107a", "#DAA520", "#4F7942"]
       }
     },
     "tooltip": [
@@ -83,6 +100,11 @@
       {
         "field": "Inequality in life expectancy (Atkinson index)",
         "type": "quantitative"
+      },
+      {
+        "field": "Population (in thousands)",
+        "type": "quantitative",
+        "format": ","
       }
     ]
   }
