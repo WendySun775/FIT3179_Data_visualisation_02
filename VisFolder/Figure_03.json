@@ -69,7 +69,7 @@
       }
     },
     "size": {
-      "field": "Population",
+      "field": "Population in thousands",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
