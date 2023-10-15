@@ -42,7 +42,7 @@
       "mark": {"type": "geoshape", "fill": "#c6c9ce", "stroke": "grey"},
       "encoding": {
         "tooltip": {
-          "value": "Data is not available"
+          "value": "Data is not available for this region."
         }
       },
       "transform": [
