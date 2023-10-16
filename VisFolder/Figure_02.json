@@ -5,8 +5,8 @@
     "color": "#2e263d",
     "fontSize": 24
   },
-  "width": 900,
-  "height": 600,
+  "width": 800,
+  "height": 500,
   "background": "#E0DDD6",
   "layer": [
     {
@@ -74,7 +74,7 @@
           "legend": {
             "title": "Life Expectancy (Years)",
             "orient": "bottom",
-            "gradientLength": 900,
+            "gradientLength": 800,
             "labelColor": "#2e263d",
             "labelFontSize": 12,
             "titleColor": "#2e263d",
@@ -123,10 +123,10 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "dx": -430,
+        "dx": -400,
         "dy": -290,
         "color": "#777777",
-        "fontSize": 15
+        "fontSize": 13
       },
       "encoding": {"text": {"field": "text", "type": "nominal"}},
       "projection": {"type": "equalEarth"}
@@ -143,10 +143,10 @@
         "type": "text",
         "align": "left",
         "baseline": "top",
-        "dx": -430,
+        "dx": -400,
         "dy": -270,
         "color": "#777777",
-        "fontSize": 15
+        "fontSize": 13
       },
       "encoding": {"text": {"field": "text", "type": "nominal"}},
       "projection": {"type": "equalEarth"}
