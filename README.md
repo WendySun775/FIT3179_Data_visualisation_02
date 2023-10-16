@@ -37,8 +37,7 @@ Below are all the resources referenced in this project
 
 **- Graphics & Icons**
 
-1.	[99designs - Design for Hemp Hop, spring water / beverage company.](https://99designs.com.au/profiles/tonitrix/designs/1766509)
-2.	[Noun Project](https://thenounproject.com/)
+1.	[Noun Project](https://thenounproject.com/)
  
  **- Materials**
  
