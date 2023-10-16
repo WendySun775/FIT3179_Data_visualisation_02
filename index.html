@@ -192,10 +192,7 @@
            </a>
            <p style="text-align:center; margin-top:10px; color:#2e263d;">Please click this icon to find more about life expectancy:)</p>
        </div>
-
-
-
-
+       
     <!-- Historical Review -->
     <div id="historical-review" class="w3-container">
     <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Historical Review: Life Expectancy Increased in All Countries of the World</h2>
@@ -219,13 +216,25 @@
       </div>
     </div>
 
-    <!-- Looking Forward -->
-    <div id="looking-forward" class="w3-container">
+<!-- Looking Forward -->
+<div id="looking-forward" class="w3-container">
     <h2 style="background-color: #C8C3B8; padding: 5px 10px; border-radius: 5px;">Looking Forward: Projections Indicate a Continual Rise in Life Expectancy Across the World</h2>
-        <div style="float: right;">
-        <!-- Vega visualization for Figure_02.json -->
-        <div id="vis2"></div>
+    
+    <!-- Flexbox layout for text and image -->
+    <div style="display: flex; flex-direction: row-reverse; align-items: flex-start;">
+        <!-- Text on the Left -->
+        <div style="flex: 1; padding: 20px;">
+            <p>Through the map on the right, we present estimates and United Nations projections of the remaining expected life years for 15-year-olds. This upward trend is most pronounced in the map view, revealing that the increase in life expectancy is not solely attributed to the decline in child mortality but also a global reduction in mortality rates among older age groups.</p>
+            <br>
+            <p>This observation is crucial in enhancing our understanding of future global life expectancy trends. It conveys that the improvement in life expectancy is not only a result of decreasing child mortality but also benefits from extended lifespans among older populations worldwide. This implies progress in the fields of healthcare and medical advancements, as well as an elevation in the quality of life for elderly individuals, all contributing to the development of this trend.</p>
+            <br>
+            <p>The outlook for the future indicates that global life expectancy will continue to rise, marking a significant achievement for human society. It reflects the collective efforts of science, healthcare, social policies, and global cooperation aimed at enhancing the quality of life and extending lifespan.</p>
+        </div>
+        <!-- Vega visualization for Figure_02.json on the Right -->
+        <div id="vis2" style="flex: 1;"></div>
     </div>
+</div>
+
 
     <!-- Disparity & Inequality -->
     <div id="disparity-inequality" class="w3-container">
