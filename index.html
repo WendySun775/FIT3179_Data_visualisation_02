@@ -142,18 +142,32 @@
         }
 
 
-        /* Footer */
-        .footer-nav {
-            width: 100%;
-            background-color: #2e263d;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 60px 0;
-            color: #E0DDD6;
-            font-weight: bold;
-            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
-        }
+.footer {
+    background-color: #2e263d;
+    color: #E0DDD6;
+    padding: 20px;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    font-weight: bold;
+}
 
     </style>
 </head>
@@ -299,12 +313,12 @@
     </div>
 </div>
 
-<!-- Footer -->
-<div class="footer-nav" style="background-color: #2e263d; color: #E0DDD6;">
-    <div style="padding: 10px;">
-        <p style="font-weight: bold;">© 2023 Wendy Sun. All rights reserved.</p>
+/*footer*/
+<div class="footer">
+    <div class="copyright">
+        <p>© 2023 Wendy Sun. All rights reserved.</p>
     </div>
-    <div class="footer-columns" style="display: flex; justify-content: space-between; padding: 20px;">
+    <div class="footer-columns">
         <div class="footer-column">
             <p style="font-weight: bold;">Data sources</p>
             <ul>
@@ -330,6 +344,7 @@
         </div>
     </div>
 </div>
+
 
 
     <!-- Including the VegaLite charts embedding -->
