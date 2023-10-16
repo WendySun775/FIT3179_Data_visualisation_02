@@ -21,7 +21,7 @@ The visualization portrays the changes in life expectancy, highlighting historic
 
 ## How to View
 
-To access the visualization, kindly follow this [link](https://wendysun775.github.io/FIT3179-Data_visualisation_02/).
+To access the visualization, kindly follow this [link](https://wendysun775.github.io/FIT3179_Data_visualisation_02/).
 
 ## References
 
